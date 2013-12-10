@@ -1,5 +1,4 @@
-# Clients for the Alfred server
-![Image](http://i.imgur.com/kqJEONr.jpg)
+# Clients for the albert server
 In this repository exists source code for different clients in different languages.
 
 The main design for the different language adaptations is to ALWAYS emulate the native way of handling events and/or message pumps.

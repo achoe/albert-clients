@@ -1,18 +1,18 @@
 {
-  "name": "alfred-client",
+  "name": "albert-client",
   "preferGlobal": false,
   "version": "1.0.0",
   "author": "Johan Jatko <johan@pie-studios.com>",
-  "description": "EventEmitter for Alfred HTTP event server",
+  "description": "EventEmitter for albert HTTP event server",
   "contributors": [
     {
       "name": "Johan Jatko",
       "email": "johan@pie-studios.com"
     }
   ],
-  "main": "./lib/alfred-client",
+  "main": "./lib/albert-client",
   "keywords": [
-    "alfred",
+    "albert",
     "http",
     "client",
     "event",

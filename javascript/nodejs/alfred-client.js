@@ -1,12 +1,12 @@
 var request = require('request')
 , o = require('fnoverload');
-function aee(alfred) {
-	this.alfredServer = alfred;
+function aee(albert) {
+	this.albertServer = albert;
 	this.handlers = [];
 }
 aee.prototype.on = aee.prototype.addListener = function(event, fn) {
 	var $aee = this
-	, r = request(this.alfredServer + "/listen/" + event + "/",  { timeout: 0})
+	, r = request(this.albertServer + "/listen/" + event + "/",  { timeout: 0})
 	.once("data", function(data) {
 		var d = data.toString().trim();
 		if(d.substring(0, 2) == "{\"") {
@@ -31,7 +31,7 @@ aee.prototype.on = aee.prototype.addListener = function(event, fn) {
 }
 aee.prototype.once = function(event, fn) {
 	var $aee = this
-	, r = request(this.alfredServer + "/listen/" + event + "/", { timeout: 0})
+	, r = request(this.albertServer + "/listen/" + event + "/", { timeout: 0})
 	.once("data", function(data) {
 		var d = data.toString().trim();
 		if(d.substring(0, 2) == "{\"") {
@@ -64,7 +64,7 @@ aee.prototype.emit = o([
 	
 	
 	, function(event, status, progress, data, fn) {
-		request.post(this.alfredServer + "/emit/" + event, {
+		request.post(this.albertServer + "/emit/" + event, {
 			body:  JSON.stringify({status: status, progress: progress, data: data}), json: true
 		}, function(err, res, body) {
 			fn(err, body);
@@ -84,7 +84,7 @@ aee.prototype.update = o([
 	
 	
 	, function(event, status, progress, data, fn) {
-		request.post(this.alfredServer + "/update/" + event, {
+		request.post(this.albertServer + "/update/" + event, {
 			body:  JSON.stringify({status: status, progress: progress, data: data}), json: true
 		}, function(err, res, body) {
 			fn && fn(err, body);
@@ -116,4 +116,4 @@ aee.prototype.removeAllListeners = o([
 		return this;
 	  }
 ]);  
-exports.AlfredEventEmitter = aee;
+exports.albertEventEmitter = aee;
