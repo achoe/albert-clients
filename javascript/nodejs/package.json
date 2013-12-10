@@ -1,0 +1,29 @@
+{
+  "name": "alfred-client",
+  "preferGlobal": false,
+  "version": "1.0.0",
+  "author": "Johan Jatko <johan@pie-studios.com>",
+  "description": "EventEmitter for Alfred HTTP event server",
+  "contributors": [
+    {
+      "name": "Johan Jatko",
+      "email": "johan@pie-studios.com"
+    }
+  ],
+  "main": "./lib/alfred-client",
+  "keywords": [
+    "alfred",
+    "http",
+    "client",
+    "event",
+    "emitter"
+  ],
+  "dependencies": {
+    "request": "~2.29.0",
+    "fnoverload": "~1.0.1"
+  },
+  "licence": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  }
+}
