@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "request": "~2.29.0",
-    "fnoverload": "~1.0.1"
+    "fnoverload": "~1.1.5"
   },
   "licence": "MIT",
   "engines": {
